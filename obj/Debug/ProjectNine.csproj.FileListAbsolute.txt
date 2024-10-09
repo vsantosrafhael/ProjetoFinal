@@ -1,0 +1,7 @@
+C:\Users\rafhael.vsantos\source\repos\ProjectNine\ProjectNine\bin\Debug\ProjectNine.exe.config
+C:\Users\rafhael.vsantos\source\repos\ProjectNine\ProjectNine\bin\Debug\ProjectNine.exe
+C:\Users\rafhael.vsantos\source\repos\ProjectNine\ProjectNine\bin\Debug\ProjectNine.pdb
+C:\Users\rafhael.vsantos\source\repos\ProjectNine\ProjectNine\obj\Debug\ProjectNine.csproj.AssemblyReference.cache
+C:\Users\rafhael.vsantos\source\repos\ProjectNine\ProjectNine\obj\Debug\ProjectNine.csproj.CoreCompileInputs.cache
+C:\Users\rafhael.vsantos\source\repos\ProjectNine\ProjectNine\obj\Debug\ProjectNine.exe
+C:\Users\rafhael.vsantos\source\repos\ProjectNine\ProjectNine\obj\Debug\ProjectNine.pdb
