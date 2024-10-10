@@ -25,14 +25,14 @@ namespace ProjectNine
                 
 
                 opcao = int.Parse(Console.ReadLine());
-
+                
                 switch (opcao)
                 {
                     case 1:
                         MenuAtividades1();
                         break;
                     case 2:
-                        Console.WriteLine("Você escolheu a Lista de Exercícios 2.");
+                        MenuAtividades2();
                         break;
                     case 3:
                         Console.WriteLine("Você escolheu a Lista de Exercícios 3.");
@@ -192,7 +192,209 @@ namespace ProjectNine
 
             } while (atividade != 0);
         }
+        static void MenuAtividades2()
+        {
+            int atividade;
+
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Atividades da Lista de Exercícios 2:");
+                Console.WriteLine("1 - Atividade 1 (Verificar número maior que 20)");
+                Console.WriteLine("2 - Atividade 2 (Verificar se o valor é maior que 10)");
+                Console.WriteLine("3 - Atividade 3 (Verificar se a soma de A + B é menor que C)");
+                Console.WriteLine("4 - Atividade 4 (Adição de dois números e verificar resultado)");
+                Console.WriteLine("5 - Atividade 5 (Informações de uma pessoa (sexo e estado civil)");
+                Console.WriteLine("6 - Atividade 6 (Verificar se um número é par ou ímpar)");
+                Console.WriteLine("7 - Atividade 7 (Comparar e calcular A e B)");
+                Console.WriteLine("8 - Atividade 8 (Dobro ou triplo de um número)");
+                Console.WriteLine("9 - Atividade 9 (Ordenar 3 valores do maior para o menor)");
+                Console.WriteLine("10 - Atividade 10 (Ordenar 3 valores do menor para o maior)");
+                Console.WriteLine("11 - Atividade 11 (Duração de um jogo de Xadrez)");
+                Console.WriteLine("0 - Voltar ao menu principal");
+                Console.Write("Escolha uma atividade: ");
+
+                atividade = int.Parse(Console.ReadLine());
+
+                switch (atividade)
+                {
+                    case 1: Atividade1(); break;
+                    case 2: Atividade2(); break;
+                    case 3: Atividade3(); break;
+                    case 4: Atividade4(); break;
+                    case 5: Atividade5(); break;
+                    case 6: Atividade6(); break;
+                    case 7: Atividade7(); break;
+                    case 8: Atividade8(); break;
+                    case 9: Atividade9(); break;
+                    case 10: Atividade10(); break;
+                    case 11: Atividade11(); break;
+                    case 0: Console.WriteLine("Voltando ao menu principal..."); break;
+                    default: Console.WriteLine("Opção inválida. Tente novamente."); break;
+                }
+
+                if (atividade != 0)
+                {
+                    Console.WriteLine("Pressione qualquer tecla para continuar.");
+                    Console.ReadKey();
+                }
+
+            } while (atividade != 0);
+        }
+
+        // Atividades da Lista 2
+        static void Atividade1()
+        {
+            Console.Clear();
+            Console.Write("Digite um número: ");
+            int numero = int.Parse(Console.ReadLine());
+            if (numero > 20)
+                Console.WriteLine($"O número {numero} é maior que 20.");
+            else
+                Console.WriteLine($"O número {numero} não é maior que 20.");
+        }
+
+        static void Atividade2()
+        {
+            Console.Clear();
+            Console.Write("Digite um valor: ");
+            int valor = int.Parse(Console.ReadLine());
+            if (valor > 10)
+                Console.WriteLine("É MAIOR QUE 10!");
+            else
+                Console.WriteLine("NÃO É MAIOR QUE 10!");
+        }
+
+        static void Atividade3()
+        {
+            Console.Clear();
+            Console.Write("Digite A: ");
+            int A = int.Parse(Console.ReadLine());
+            Console.Write("Digite B: ");
+            int B = int.Parse(Console.ReadLine());
+            Console.Write("Digite C: ");
+            int C = int.Parse(Console.ReadLine());
+            if (A + B < C)
+                Console.WriteLine($"A soma de A + B ({A + B}) é menor que C ({C}).");
+            else
+                Console.WriteLine($"A soma de A + B ({A + B}) não é menor que C ({C}).");
+        }
+
+        static void Atividade4()
+        {
+            Console.Clear();
+            Console.Write("Digite um número A: ");
+            int A = int.Parse(Console.ReadLine());
+            Console.Write("Digite um número B: ");
+            int B = int.Parse(Console.ReadLine());
+            int resultado = A + B;
+            if (resultado > 10)
+                Console.WriteLine($"A soma de A e B é {resultado}, que é maior que 10.");
+        }
+
+        static void Atividade5()
+        {
+            Console.Clear();
+            Console.Write("Digite seu nome: ");
+            string nome = Console.ReadLine();
+            Console.Write("Digite seu sexo (M/F): ");
+            char sexo = char.Parse(Console.ReadLine().ToUpper());
+            Console.Write("Digite seu estado civil: ");
+            string estadoCivil = Console.ReadLine().ToUpper();
+
+            if (sexo == 'F' && estadoCivil == "CASADA")
+            {
+                Console.Write("Quantos anos está casada? ");
+                int anosCasada = int.Parse(Console.ReadLine());
+                Console.WriteLine($"Olá {nome}, você está casada há {anosCasada} anos.");
+            }
+        }
+
+        static void Atividade6()
+        {
+            Console.Clear();
+            Console.Write("Digite um número: ");
+            int numero = int.Parse(Console.ReadLine());
+            if (numero % 2 == 0)
+                Console.WriteLine($"O número {numero} é par.");
+            else
+                Console.WriteLine($"O número {numero} é ímpar.");
+        }
+
+        static void Atividade7()
+        {
+            Console.Clear();
+            Console.Write("Digite A: ");
+            int A = int.Parse(Console.ReadLine());
+            Console.Write("Digite B: ");
+            int B = int.Parse(Console.ReadLine());
+
+            int C;
+            if (A == B)
+            {
+                C = A + B;
+            }
+            else
+            {
+                C = A * B;
+            }
+            Console.WriteLine($"O resultado é: {C}");
+        }
+
+        static void Atividade8()
+        {
+            Console.Clear();
+            Console.Write("Digite um número: ");
+            int numero = int.Parse(Console.ReadLine());
+
+            if (numero > 0)
+                Console.WriteLine($"O dobro de {numero} é {numero * 2}.");
+            else
+                Console.WriteLine($"O triplo de {numero} é {numero * 3}.");
+        }
+
+        static void Atividade9()
+        {
+            Console.Clear();
+            Console.WriteLine("Digite 3 valores:");
+            int[] valores = new int[3];
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write($"Valor {i + 1}: ");
+                valores[i] = int.Parse(Console.ReadLine());
+            }
+            Array.Sort(valores);
+            Array.Reverse(valores);
+            Console.WriteLine("Valores do maior para o menor: " + string.Join(", ", valores));
+        }
+
+        static void Atividade10()
+        {
+            Console.Clear();
+            Console.WriteLine("Digite 3 valores:");
+            int[] valores = new int[3];
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write($"Valor {i + 1}: ");
+                valores[i] = int.Parse(Console.ReadLine());
+            }
+            Array.Sort(valores);
+            Console.WriteLine("Valores do menor para o maior: " + string.Join(", ", valores));
+        }
+
+        static void Atividade11()
+        {
+            Console.Clear();
+            Console.Write("Digite a hora de início do jogo (0-23): ");
+            int inicio = int.Parse(Console.ReadLine());
+            Console.Write("Digite a hora de fim do jogo (0-23): ");
+            int fim = int.Parse(Console.ReadLine());
+
+            int duracao = fim >= inicio ? fim - inicio : (24 - inicio + fim);
+            Console.WriteLine($"Duração do jogo: {duracao} horas.");
+        }
     }
 }
+
     
 
